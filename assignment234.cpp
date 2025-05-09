@@ -6,16 +6,14 @@
 #include <algorithm>
 using namespace std;
 
-// ----------------------
-// Base Class: Person
-// ----------------------
+
 class Person {
 protected:
     string fullName, uniqueId, phoneNumber;
     int personAge;
 
 public:
-    // Constructor with basic validation
+    
     Person(string n, int a, string i, string c) {
         setName(n);
         setAge(a);
@@ -47,9 +45,7 @@ public:
     string getContact() { return phoneNumber; }
 };
 
-// ----------------------
-// Derived Class: Student
-// ----------------------
+
 class Student : public Person {
     string academicProgram;
     string joinDate;
@@ -78,9 +74,7 @@ public:
     }
 };
 
-// ------------------------
-// Derived Class: Professor
-// ------------------------
+
 class Professor : public Person {
     string faculty, areaOfExpertise, dateOfJoining;
 
@@ -98,9 +92,7 @@ public:
     }
 };
 
-// ------------------
-// Course Class
-// ------------------
+
 class Course {
     string courseCode, courseTitle, courseDesc;
     int creditHours;
@@ -132,9 +124,7 @@ public:
     Department(string n, string l, float b) : deptName(n), deptLocation(l), allocatedBudget(b) {}
 };
 
-// ------------------------------------------
-// GradeBook – manages student grades in a course
-// ------------------------------------------
+
 class GradeBook {
     map<string, float> gradeMap;
 
@@ -165,9 +155,7 @@ public:
     }
 };
 
-// ------------------------------------------
-// EnrollmentManager – tracks student enrollments
-// ------------------------------------------
+
 class EnrollmentManager {
     map<string, vector<string>> enrollmentRecords;
 
@@ -186,9 +174,7 @@ public:
     }
 };
 
-// ------------------------------------------
-// Test polymorphism with Person pointers
-// ------------------------------------------
+
 void testPolymorphism() {
     cout << "------ Running Polymorphism Test ------" << endl;
 
